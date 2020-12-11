@@ -7,7 +7,7 @@
 
   <!--<Desc>StepsTemplate用来定义步骤模板，可以将一个或多个步骤定义成一个模板，正式case里直接引用模板id即可，减少重复编写</Desc>-->
   <StepsTemplate Name="prelogin" ID="prelogin">
-      <Desc>定义登录的步骤模板，这里的SetUp值为True，表示在每个正式case开始前都会运行这个模板下的所有步骤</Desc>
+      <Desc>定义预登录的步骤模板，模板不是正式的case，只是方便之后的case频繁调用</Desc>
       <!--Step里的部分标签可以覆盖上面定义的全局配置,如这组里的StepPackage、Module、Group、ParameterFileName-->
       <!--因为这里需要引用到demo1下面的的参数文件所以StepParameterFileName的值有"demo1/"这个前缀-->
       <Step StepPackage="projects.demo1.stepgroups" StepModule="demoPreLogin_step" StepGroup="DemoPreLoginStep"
