@@ -15,7 +15,7 @@ python3 + pytest + allure +xml +自封装的支持多平台、多项目、多(�
 ----------
 
 **项目操作步骤介绍**
- 1. api_pygat目录  pip3 install -i https://pypi.douban.com/simple/ -r requirements.txt 可以批量安装所需依赖包
+ 1. 根目录  pip3 install -i https://pypi.douban.com/simple/ -r requirements.txt 可以批量安装所需依赖包
  2. 运行根目录下的`set_rootdir.py`文件，生成本地`ROOTDIR`(仅首次使用该框架运行一次，这里需要进到该目录下运行，不能在别的目录用相对或绝对路径运行，直接在pycharm运行该文件也可以)
  3. 在`projects`目录下创建项目，目前最多支持二级（这里提供了demo项目作为参考，其中demo1为1层，demo2是两层目录，比如有的项目可能分学生端、教师端等）
  4. 各项目的`datafile`目录中存储用例参数文件(***parameters.xml)和用例描述文件(***testcases.xml），`stepgroups`目录中编写py脚本
