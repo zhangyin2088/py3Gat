@@ -1,0 +1,6 @@
+    def test_{TESTMETHOD}(self):
+        executor=IStepsCaseExecutor(self.project_name,"{CASEFILENAME}","{CASEID}")
+        executor.execute()
+        
+    
+        
