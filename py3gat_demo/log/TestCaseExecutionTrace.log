@@ -1,0 +1,4 @@
+28 Aug 2020 15:30:20 INFO Get Value:  safafaf
+28 Aug 2020 15:30:20 DEBUG Gat.util.stepvaluepool.get_value was invoked and parameters are (<Gat.util.stepvaluepool.StepValuePool object at 0x0000016EA6066988>, 'safafaf')
+28 Aug 2020 16:29:05 INFO Get Value:  safafaf
+28 Aug 2020 16:29:05 DEBUG Gat.util.stepvaluepool.get_value was invoked and parameters are (<Gat.util.stepvaluepool.StepValuePool object at 0x000001DE3D8D69C8>, 'safafaf')
