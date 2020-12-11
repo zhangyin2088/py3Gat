@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<StepParametersList>
+    <StepParameter ID="demo_logout_none_params" StepName="demo_logout_none_params">
+        <!-- 如果接口的参数都由别的接口传过来或者动态生成，parameters里也可以不写任何参数-->
+        <!--Parameters标签可以不写或者不填值，框架解出来的Parameters初始为空字典{}-->
+        <!--<Parameters></Parameters>-->
+        <Expect>
+            <code>0</code>
+            <message>success</message>
+        </Expect>
+    </StepParameter>
+
+</StepParametersList>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--这个用例描述文件用来设计要运行的case，由一些全局配置标签加上具体的测试用例组成-->
+<TestCaseList>
+  <!--全局默认的参数文件，如果想调用其他的参数文件，可以在TestCase标签或者Step标签重新定义，来覆盖全局定义-->
+  <StepParametersFileName>demopreloginparameters.xml</StepParametersFileName>
+
+  <!--全局默认的python脚本所在的包的路径，同样可以在TestCase标签或者Step里被覆盖-->
+  <StepPackage>projects.demo1.stepgroups</StepPackage>
+
+  <!--全局默认的python脚本文件名，同样可以在TestCase标签或者Step里被覆盖-->
+  <StepModule>demoPreLogin_step</StepModule>
+
+  <!--全局默认的要调用的测试方法所在的类，同样可以在TestCase标签或者Step里被覆盖-->
+  <StepGroup>DemoPreLoginStep</StepGroup>
+
+   <!--正式的测试case，由一个或多个step组成，按顺序运行，每个case可以用CaseTag打上标记，+号代表同时打多个标记-->
+   <TestCase Name="01_demoPreLoginSuccess" ID="01_demo_pre_login_success" CaseTag="P1" Owner="zhangyin">
+      <Desc>该case就是测试指定手机号正常预登录成功的情况，被标记为P1优先级</Desc>
+      <TestSteps>
+          <!--这一条用例的具体step组成，一般一个step其实就是一个接口，对应的是一个测试方法+一组测试参数-->
+          <!--这里的case只有一个step，参数文件和用例描述文件分离对于单接口测试来说确实有点配置过于复杂了，但是该框架的重点是对组合接口的支持-->
+          <!--StepName表示的是要调用的测试函数（方法名），通过包-模块-类-函数名拼出完整路径-->
+          <Step StepName="demoPreLoginSucStep" StepParameterID="demo_pre_login_mobile_166"/>
+      </TestSteps>
+   </TestCase>
+
+   <TestCase Name="02_demoPreLoginMobileWrongType" ID="02_demo_preLogin_mobile_wrong_type" CaseTag="P3">
+      <Desc>测试mobile参数类型传错的情况，该case标记为P3优先级</Desc>
+      <TestSteps>
+          <!--不同的参数可以调用不同的测试函数（方法），实现参数跟函数的一一对应-->
+          <!--比如上一个case的是预登录成功，调用成功的函数则可以向后传参，把ticket存起来，而失败的函数则不用-->
+          <Step StepName="demoPreLoginFailStep" StepParameterID="demo_pre_login_str_mobile"/>
+      </TestSteps>
+   </TestCase>
+
+    <TestCase Name="03_demoPreLoginLackMobile" ID="03_demo_pre_login_lack_mobile" CaseTag="P3">
+      <Desc>测试mobile参数缺失的情况，该case标记为P3优先级</Desc>
+      <TestSteps>
+          <!--调用的这组参数lack_mobile缺少手机号，调用的方法是期望失败的方法（传什么参数就用什么参数）-->
+          <Step StepName="demoPreLoginFailStep" StepParameterID="demo_pre_login_lack_mobile"/>
+      </TestSteps>
+   </TestCase>
+
+    <TestCase Name="04_demoPreLoginRandomMobileSuc" ID="04_demo_pre_login_random_mobile_suc" CaseTag="P1+BVT">
+      <Desc>测试mobile参数缺失的情况，该case标记为P1+BVT双标签</Desc>
+      <TestSteps>
+          <!--同样的参数也可以调用不同的测试函数（方法），这也是框架灵活的地方-->
+          <!--比如上一个case测试的是缺少mobile,而同一组参数调用成功的函数则会补上随机生成的手机号-->
+          <Step StepName="demoPreLoginSucStep" StepParameterID="demo_pre_login_lack_mobile"/>
+      </TestSteps>
+   </TestCase>
+
+
+</TestCaseList>

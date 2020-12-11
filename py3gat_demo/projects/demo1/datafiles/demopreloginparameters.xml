@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--这个文件用来构造测试参数-->
+<StepParametersList>
+    <!--每组参数需要有唯一的ID,用例描述文件(test_*.cases.xml)里通过ID调用指定的一组参数-->
+    <StepParameter ID="demo_pre_login_mobile_166" StepName="demo_pre_login_mobile_166">
+        <!--Parameters标签下面用来存接口发送的参数-->
+        <Parameters>
+            <mobile>16666666666</mobile>
+            <!--全数字组成的参数默认解析成数值类型，加上双引号则是str类型-->
+            <sms>"0000"</sms>
+        </Parameters>
+        <!--Expect标签下面用来存期望结果-->
+        <Expect>
+            <code>0</code>
+            <message>success</message>
+        </Expect>
+    </StepParameter>
+
+    <!--这一组参数测试手机号为str的情况-->
+    <StepParameter ID="demo_pre_login_str_mobile" StepName="demo_pre_login_str_mobile">
+        <Parameters>
+            <mobile>"16666666666"</mobile>
+            <sms>"0000"</sms>
+        </Parameters>
+        <Expect>
+            <code>102</code>
+        </Expect>
+    </StepParameter>
+
+    <!--这一组参数测试我们不填手机号，通过调用不同的step可以测试随机手机号的case和缺少手机号的case（参见用例描述文件）-->
+    <StepParameter ID="demo_pre_login_lack_mobile" StepName="demo_pre_login_lack_mobile">
+        <Parameters>
+            <sms>"0000"</sms>
+        </Parameters>
+        <!-- 因为这组参数可能产生不同的实际结果，expect期望结果我们就不写内容-->
+        <Expect></Expect>
+    </StepParameter>
+
+
+</StepParametersList>

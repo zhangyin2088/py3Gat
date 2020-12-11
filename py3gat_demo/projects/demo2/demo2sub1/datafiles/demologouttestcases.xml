@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<TestCaseList>
+  <StepParametersFileName>demologoutparameters.xml</StepParametersFileName>
+  <StepPackage>projects.demo2.demo2sub1.stepgroups</StepPackage>
+  <StepModule>demoLogout_step</StepModule>
+  <StepGroup>DemoLogoutStep</StepGroup>
+
+  <StepsTemplate Name="loginSuc" ID="loginSuc" SetUp="True">
+      <Desc>定义从预登录到登录成功的步骤模板，这里的SetUp值为True，表示在每个正式case开始前都会运行这个模板下的所有步骤</Desc>
+      <Step StepPackage="projects.demo1.stepgroups" StepModule="demoPreLogin_step" StepGroup="DemoPreLoginStep"
+            StepName="demoPreLoginSucStep" StepParametersFileName="demo1/demopreloginparameters.xml"
+            StepParameterID="demo_pre_login_lack_mobile"/>
+      <Step StepModule="demoLogin_step" StepGroup="DemoLoginStep" StepName="demoLoginSucStep"
+            StepParametersFileName="demologinparameters.xml" StepParameterID="demo_login_lack_mobile_and_ticket"/>
+  </StepsTemplate>
+
+  <StepsTemplate Name="logout" ID="logout" TearDown="True">
+      <Desc>定义登出步骤模板，这里的TearDown值为True，表示在每个正式case结束前都会运行这个模板下的所有步骤</Desc>
+      <Step StepName="demoLogoutSucStep" StepParameterID="demo_logout_none_params"/>
+  </StepsTemplate>
+
+   <TestCase Name="01_demoLogin_out_in_outSuccess" ID="01_demoLogin_out_in_outSuccess" CaseTag="P1+BVT" Owner="zhangyin">
+      <Desc>先调用setUp为True的模板，然后按步骤执行下面的Step（包括模板），最后调用TearDown模板，该case标记为BVT+P1双标签</Desc>
+      <TestSteps>
+          <Step StepsTemplateID="logout"/>
+          <Step StepsTemplateID="loginSuc"/>
+      </TestSteps>
+   </TestCase>
+
+
+</TestCaseList>

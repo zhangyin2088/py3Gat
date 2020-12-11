@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<TestCaseList>
+  <StepParametersFileName>demologinparameters.xml</StepParametersFileName>
+  <StepPackage>projects.demo2.demo2sub1.stepgroups</StepPackage>
+  <StepModule>demoLogin_step</StepModule>
+  <StepGroup>DemoLoginStep</StepGroup>
+
+  <!--<Desc>StepsTemplate用来定义步骤模板，可以将一个或多个步骤定义成一个模板，正式case里直接引用模板id即可，减少重复编写</Desc>-->
+  <StepsTemplate Name="prelogin" ID="prelogin">
+      <Desc>定义登录的步骤模板，这里的SetUp值为True，表示在每个正式case开始前都会运行这个模板下的所有步骤</Desc>
+      <!--Step里的部分标签可以覆盖上面定义的全局配置,如这组里的StepPackage、Module、Group、ParameterFileName-->
+      <!--因为这里需要引用到demo1下面的的参数文件所以StepParameterFileName的值有"demo1/"这个前缀-->
+      <Step StepPackage="projects.demo1.stepgroups" StepModule="demoPreLogin_step" StepGroup="DemoPreLoginStep"
+            StepName="demoPreLoginSucStep" StepParametersFileName="demo1/demopreloginparameters.xml"
+            StepParameterID="demo_pre_login_lack_mobile"/>
+  </StepsTemplate>
+
+   <TestCase Name="01_demoLoginSuccess" ID="01_demo_login_success" CaseTag="P1+BVT" Owner="zhangyin">
+      <Desc>先执行prelogin的模板步骤，存下来ticket，然后执行登录成功（取到第一步的ticket），该case标记为BVT+P1双标签</Desc>
+      <TestSteps>
+          <Step StepsTemplateID="prelogin"/>
+          <Step StepName="demoLoginSucStep" StepParameterID="demo_login_lack_mobile_and_ticket"/>
+      </TestSteps>
+   </TestCase>
+
+    <TestCase Name="02_demoLoginFailedLackParams" ID="02_demo_login_fail_lack_params" CaseTag="P3" Owner="zhangyin">
+      <Desc>测试缺少参数mobile和ticket的情况</Desc>
+      <TestSteps>
+          <Step StepName="demoLoginFailedStep" StepParameterID="demo_login_lack_mobile_and_ticket"/>
+      </TestSteps>
+   </TestCase>
+
+   <TestCase Name="03_demoLoginWrongPlatform" ID="03_demo_login_wrong_platform" CaseTag="P2">
+      <Desc>测试正常从上个接口获取手机号和ticket但验证码错误的情况</Desc>
+      <TestSteps>
+          <Step StepsTemplateID="prelogin"/>
+          <Step StepName="demoLoginFailedStep" StepParameterID="demo_login_wrong_platform"/>
+      </TestSteps>
+   </TestCase>
+
+
+</TestCaseList>

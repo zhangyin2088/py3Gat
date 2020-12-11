@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<StepParametersList>
+    <StepParameter ID="demo_login_lack_mobile_and_ticket" StepName="demo_login_lack_mobile_and_ticket">
+        <Parameters>
+            <platform>ios</platform>
+        </Parameters>
+        <!--Expect标签可以不写或者不填值，框架解出来的Expect初始为None-->
+        <!--<Expect></Expect>-->
+    </StepParameter>
+
+    <StepParameter ID="demo_login_wrong_platform" StepName="demo_login_wrong_platform">
+        <Parameters>
+            <platform>abc</platform>
+        </Parameters>
+        <Expect>
+            <code>102</code>
+        </Expect>
+    </StepParameter>
+
+
+</StepParametersList>
