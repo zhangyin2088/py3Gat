@@ -1,0 +1,8 @@
+21 Aug 2020 20:20:35 INFO Put Value:  order_id:1222
+21 Aug 2020 20:20:35 DEBUG Gat.util.stepvaluepool.put_value was invoked and parameters are (<Gat.util.stepvaluepool.StepValuePool object at 0x000001FD61237E88>, 'order_id', '1222')
+21 Aug 2020 20:20:35 INFO Put Value:  product_id:1212121
+21 Aug 2020 20:20:35 DEBUG Gat.util.stepvaluepool.put_value was invoked and parameters are (<Gat.util.stepvaluepool.StepValuePool object at 0x000001FD61237E88>, 'product_id', '1212121')
+21 Aug 2020 20:20:35 INFO Get Value:  order_id
+21 Aug 2020 20:20:35 DEBUG Gat.util.stepvaluepool.get_value was invoked and parameters are (<Gat.util.stepvaluepool.StepValuePool object at 0x000001FD61237E88>, 'order_id')
+21 Aug 2020 20:20:35 INFO Get Value:  order_id
+21 Aug 2020 20:20:35 DEBUG Gat.util.stepvaluepool.get_value was invoked and parameters are (<Gat.util.stepvaluepool.StepValuePool object at 0x000001FD61237E88>, 'order_id')

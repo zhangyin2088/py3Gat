@@ -1,0 +1,36 @@
+14 Aug 2020 10:33:36 DEBUG E:/autotest/api_automation/api_pygat/Gat/util/assertHelper.py    assert_dict_contain    22    
+14 Aug 2020 10:33:36 INFO {'222': {'44': {'66': [{'333': 556}, {'555': 666}]}}}
+14 Aug 2020 10:33:36 DEBUG E:/autotest/api_automation/api_pygat/Gat/util/assertHelper.py    assert_dict_contain    22    
+14 Aug 2020 10:33:36 INFO {'44': {'66': [{'333': 556}, {'555': 666}]}}
+14 Aug 2020 10:33:36 DEBUG E:/autotest/api_automation/api_pygat/Gat/util/assertHelper.py    assert_dict_contain    22    
+14 Aug 2020 10:33:36 INFO {'66': [{'333': 556}, {'555': 666}]}
+14 Aug 2020 10:33:36 DEBUG E:/autotest/api_automation/api_pygat/Gat/util/assertHelper.py    assert_dict_contain    22    
+14 Aug 2020 10:33:36 INFO [{'333': 556}, {'555': 666}]
+14 Aug 2020 10:33:36 DEBUG E:/autotest/api_automation/api_pygat/Gat/util/assertHelper.py    assert_dict_contain    22    
+14 Aug 2020 10:33:36 INFO {'333': 556}
+14 Aug 2020 10:33:36 DEBUG E:/autotest/api_automation/api_pygat/Gat/util/assertHelper.py    assert_dict_contain    22    
+14 Aug 2020 10:33:36 INFO 556
+14 Aug 2020 10:33:52 DEBUG E:/autotest/api_automation/api_pygat/Gat/util/assertHelper.py    assert_dict_contain    22    
+14 Aug 2020 10:33:52 INFO {'222': {'44': {'66': [{'333': 555}, {'555': 666}]}}}
+14 Aug 2020 10:33:52 DEBUG E:/autotest/api_automation/api_pygat/Gat/util/assertHelper.py    assert_dict_contain    22    
+14 Aug 2020 10:33:52 INFO {'44': {'66': [{'333': 555}, {'555': 666}]}}
+14 Aug 2020 10:33:52 DEBUG E:/autotest/api_automation/api_pygat/Gat/util/assertHelper.py    assert_dict_contain    22    
+14 Aug 2020 10:33:52 INFO {'66': [{'333': 555}, {'555': 666}]}
+14 Aug 2020 10:33:52 DEBUG E:/autotest/api_automation/api_pygat/Gat/util/assertHelper.py    assert_dict_contain    22    
+14 Aug 2020 10:33:52 INFO [{'333': 555}, {'555': 666}]
+14 Aug 2020 10:33:52 DEBUG E:/autotest/api_automation/api_pygat/Gat/util/assertHelper.py    assert_dict_contain    22    
+14 Aug 2020 10:33:52 INFO {'333': 555}
+14 Aug 2020 10:33:52 DEBUG E:/autotest/api_automation/api_pygat/Gat/util/assertHelper.py    assert_dict_contain    22    
+14 Aug 2020 10:33:52 INFO 555
+14 Aug 2020 10:33:52 DEBUG E:/autotest/api_automation/api_pygat/Gat/util/assertHelper.py    assert_dict_contain    22    
+14 Aug 2020 10:33:52 INFO {'555': 666}
+14 Aug 2020 10:33:52 DEBUG E:/autotest/api_automation/api_pygat/Gat/util/assertHelper.py    assert_dict_contain    22    
+14 Aug 2020 10:33:52 INFO 666
+14 Aug 2020 10:48:54 DEBUG E:/autotest/api_automation/api_pygat/Gat/util/assertHelper.py    assert_dict_contain_after_logging    22    
+14 Aug 2020 10:48:54 INFO Expected Result: {'222': {'44': {'66': [{'333': 555}, {'555': 666}]}}}
+14 Aug 2020 10:48:54 DEBUG E:/autotest/api_automation/api_pygat/Gat/util/assertHelper.py    assert_dict_contain_after_logging    23    
+14 Aug 2020 10:48:54 INFO Actual Result: {'111': None, '222': {'33': 44, '44': [{'55': 66}, {'66': [{'333': 444}, {'333': 555}, {'555': 666}]}]}}
+14 Aug 2020 10:53:39 DEBUG E:/autotest/api_automation/api_pygat/Gat/util/assertHelper.py    assert_dict_contain_after_logging    22    
+14 Aug 2020 10:53:39 INFO Expected Result: {'222': {'44': {'66': [{'333': 555}, {'555': 666}]}}}
+14 Aug 2020 10:53:39 DEBUG E:/autotest/api_automation/api_pygat/Gat/util/assertHelper.py    assert_dict_contain_after_logging    23    
+14 Aug 2020 10:53:39 INFO Actual Result: {'111': None, '222': {'33': 44, '44': [{'55': 66}, {'66': [{'333': 444}, {'333': 555}, {'555': 666}]}]}}
